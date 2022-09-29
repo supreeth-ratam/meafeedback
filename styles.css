@@ -1,0 +1,35 @@
+.form-centered{
+    width: 70%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.logo{
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+}
+.optional{
+    color: grey;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+@media (max-width: 440px) {
+    .form-centered{
+        width: 100%;
+        padding: 5px;
+    }
+    .form-centered h3{
+        font-size: 1.3rem;
+        box-shadow: none;
+    }
+    .container{
+        box-shadow: none !important;
+        
+    }
+    .section{
+        padding-top: 0rem;
+    }
+  }

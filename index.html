@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
+      <title>MEA Feedback</title>
+=======
+    <title>MEA Feedback</title>
+>>>>>>> 76809feffdfeae6e50280b121ff14cb5636712fe
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container form-centered">
+    <form id="my-form"
+    method="POST" 
+    action="https://script.google.com/macros/s/AKfycbzCyJNl7WlpZmpg7K8aHF4E8fw0B2wfpY4myfVoaayRxgQdKHdb6VBwFFRJj3trRl8NnQ/exec"
+    >
+      <img src="./logo.png" alt="none" class="logo">
+      <h3 class="title">
+        Please Register Your Complaints/Suggestions Here
+      </h3>
+      <div class="field">
+        <label class="label">Name <span class="optional">(Optional)</span></label>
+        <div class="control">
+          <input  class="input" type="text" name="Name" placeholder="Your Name">
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Email <span class="optional">(Optional)</span></label>
+        <div class="control">
+          <input  class="input" type="text" name="Email" placeholder="Enter your email address">
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Phone Number <span class="optional">(Optional)</span></label>
+        <div class="control">
+          <input  class="input" type="text" name="PhoneNumber" placeholder="Enter your phone number">
+        </div>
+      </div>
+    
+      <div class="field">
+        <label class="label">Programme <span style="color: red;">*</span></label>
+        <div class="control">
+          <input required class="input" type="text" name="Programme"  placeholder="Btech/Dual Degree/M-tech/PHD">
+        </div>
+      </div>
+      
+    
+      <div class="field">
+        <label class="label">Year Of Study <span style="color: red;">*</span></label>
+        <div class="control">
+          <div class="select">
+            <select name="YearOfStudy">
+              <option>Select dropdown</option>
+              <option>1st</option>
+              <option>2nd</option>
+              <option>3rd</option>
+              <option>4th</option>
+              <option>5th</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      
+    
+      <div class="field">
+        <label class="label">Category <span style="color: red;">*</span></label>
+        <div class="control">
+          <div class="select" >
+            <select name="Category">
+              <option>Select dropdown </option>
+              <option>Course related</option>
+              <option>UG & PG Lounge Related</option>
+              <option>Resources Related</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Message <span style="color: red;">*</span></label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Complaint/Suggestions" name="message" required></textarea>
+        </div>
+      </div>
+      
+     
+    
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link is-warning" type="submit">Submit</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Cancel</button>
+        </div>
+    </div>
+</form>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+  });
+});
+
+  </script>
+  </body>
+</html>
