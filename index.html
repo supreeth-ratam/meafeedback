@@ -95,7 +95,7 @@
       
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link is-warning" type="submit">Submit</button>
+          <button class="button is-link is-warning" id="myBtn" type="submit">Submit</button>
         </div>
         <div class="control">
           <button class="button is-link is-light">Cancel</button>
@@ -109,6 +109,7 @@
   const form = document.getElementById('my-form');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
+    document.getElementById("myBtn").disabled = true; 
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
@@ -116,7 +117,9 @@
       body: data,
     })
     .then(() => {
-      alert("Success!");
+      alert("Successfully Submitted");
+      document.getElementById("my-form").reset();
+      document.getElementById("myBtn").disabled = false; 
     })
   });
 });
